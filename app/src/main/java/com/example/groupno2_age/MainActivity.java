@@ -10,7 +10,7 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
     EditText efname, elname, eage;
-    TextView teks;
+    TextView teks1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
         efname = (EditText) findViewById(R.id.editfirstname);
         elname = (EditText) findViewById(R.id.editlastname);
         eage = (EditText) findViewById(R.id.editage);
-        teks = (TextView) findViewById(R.id.t1);
+        teks1 = (TextView) findViewById(R.id.t1);
 
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -30,10 +30,10 @@ public class MainActivity extends AppCompatActivity {
                 double numage = Double.parseDouble(eage.getText().toString());
 
                 if (numage <= 17) {
-                    teks.setText(numfname + " " + numlname + "  Cannot Vote!!!");
+                    teks1.setText(numfname + " " + numlname + "  Cannot Vote!!!");
                 }
                 if (numage >= 18) {
-                    teks.setText(numfname + " " + numlname + "  Can Vote!!!");
+                    teks1.setText(numfname + " " + numlname + "  Can Vote!!!");
                 }
             }
         });
